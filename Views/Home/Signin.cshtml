@@ -1,0 +1,25 @@
+﻿@model LoginModel
+
+@{
+    ViewData["Title"] = "Sign Page";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome back</h1>
+    <div>
+        <form asp-action="SignIn" method="post">
+            <div>
+                <h5>Email</h5>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <h5>Re-type Password</h5>
+                <input asp-for="Password" type="password" />
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

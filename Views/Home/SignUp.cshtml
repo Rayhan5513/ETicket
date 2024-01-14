@@ -1,0 +1,40 @@
+﻿@model User
+@{
+    ViewData["Title"] = "SignUp Page";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="text-center">
+    <h1 class="display-4">SignUp</h1>
+    <div>
+        <form asp-action="SignUp" method="post">
+            <div>
+                <h5>Email</h5>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <h5>First Name</h5>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div>
+                <h5>Last Name</h5>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div>
+                <h5>Password</h5>
+                <input asp-for="Password" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <h5>Re-type Password</h5>
+                <input asp-for="ConfirmPassword" type="password" />
+            </div>
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
